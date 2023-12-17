@@ -219,6 +219,192 @@ header
   }
 }
 
+
+
+/* ================================================= */
+
+/* ヒーロー画像 */
+
+.hero-img {
+  position: relative;
+  width: 100%;
+  height: 110vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.slide-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  animation: slider 32s linear infinite;
+  z-index: 0;
+}
+
+.hero-h1 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  z-index: 100;
+  top: 50vh;
+  left: 0%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+.hero-logo {
+  width: 15vw;
+  filter: drop-shadow(0px 0px 5px var(--white));
+}
+
+.slide-image:nth-child(1) {
+  background-image: url(../img/kenkodohero11.jpg);
+  animation-delay: 0s;
+}
+
+.slide-image:nth-child(2) {
+  background-image: url(../img/night.jpg);
+  animation-delay: 8s;
+}
+
+.slide-image:nth-child(3) {
+  background-image: url(../img/kenkodohero11.jpg);
+  animation-delay: 16s;
+}
+
+.slide-image:nth-child(4) {
+  background-image: url(../img/night.jpg);
+  animation-delay: 24s;
+}
+
+@keyframes slider {
+  0% {
+      opacity: 0;
+      transform: scale(1);
+  }
+
+  4.16% {
+      opacity: 1;
+  }
+
+  33.33% {
+      opacity: 1;
+  }
+
+  41.66% {
+      opacity: 0;
+      transform: scale(1.2);
+  }
+
+  100% {
+      opacity: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-img {
+      height: 80vh;
+  }
+
+  .hero-h1 {
+      top: 40vh;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+  }
+
+  .hero-logo {
+      width: 30vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero-img {
+      height: 60vh;
+  }
+      .hero-h1 {
+      top: 30vh;
+      transform: translateY(-50%);
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+  }
+}
+
+
+/* ================================================= */
+
+/* 波 */
+
+.hero-img .wave-box {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  z-index: 100;
+  bottom: -10px;
+  left: 0;
+}
+
+.hero-img .waves {
+  fill: var(--white);
+  width: 100%;
+  height: 20vh;
+}
+
+.parallax>use {
+  animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+      transform: translate3d(-90px, 0, 0);
+  }
+
+  100% {
+      transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-img .waves {
+      height: 10vh;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .hero-img .waves {
+      height: 10vh;
+  }
+}
+
 /* ==========================================================================
 スクロール
 ============================================================================= */
@@ -606,7 +792,6 @@ body
 .enjoy {
   font-size: 4rem;
   text-align: center;
-  padding-top: 475px;
   padding-bottom: 80px;
   text-shadow: 3px 4px 3px #afafaf;
 }
@@ -627,7 +812,7 @@ body
 .enjoy {
   font-size: 4rem;
   text-align: center;
-  padding-top: 950px;
+  
   padding-bottom: 80px;
   text-shadow: 3px 4px 3px #afafaf;
 }
