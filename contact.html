@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>チケット申し込み</title>
+
+  <meta name="description" content="レストラン">
+
+  <!-- css -->
+  <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+  <link rel="stylesheet" href="css/stylecook.css">
+
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru&display=swap" rel="stylesheet">
+</head>
+
+<body id="cont">
+  <header class="page-header">
+
+
+  </header>
+
+
+  <div class="wrapper">
+
+    <main>
+
+      <h2 class="yoyaku">ご予約はこちらから</h2>
+
+      <p>下記の手順をお読みになり、お申し込みください。</p>
+
+
+      <ol>
+        <li>お名前・メールアドレスを記入し、希望のお部屋・日時を選択してお申し込みください。</li>
+        <li>お申し込み後、メールが送信され、予約番号が発行されます。</li>
+        <li>当日、受付で予約番号をご提示いただき、料金をお支払いください。</li>
+
+      </ol>
+
+      <div class="Form">
+        <div class="Form-Item">
+          <p><label for="name">お名前</label></p>
+          <input type="text" name="name" id="name" placeholder="例）山田太郎" required>
+        </div>
+        <div class="Form-Item">
+          <p><label for="tel">電話番号</label></p>
+          <input type="tel" class="Form-Item-Input" placeholder="例）000-0000-0000">
+        </div>
+        <div class="Form-Item">
+          <p><label for="email">メールアドレス</label></p>
+          <input type="email" class="Form-Item-Input" placeholder="例）example@gmail.com">
+        </div>
+
+        <div class="Form-Item">
+          <label>
+            <p>ご希望のお部屋</p>
+              <input type="checkbox" name="menu" value="ヴィラ">
+              ヴィラ
+            </label>
+            <label>
+              <input type="checkbox" name="menu" value="ドームテント">
+              ドームテント
+            </label>
+            <label>
+              <input type="checkbox" name="menu" value="グランピングテント">
+              グランピングテント
+            </label>
+
+        
+        </div>
+
+        <div class="Form-Item">
+          <label>
+            <p>ご予約希望日</p>
+            <input type="checkbox" name="checkbox-name" value="1">
+            11/1宿泊
+          </label>
+          <label>
+            <input type="checkbox" name="checkbox-name" value="2" checked>
+            11/2宿泊
+          </label>
+          <label>
+            <input type="checkbox" name="checkbox-name" value="3" disabled>
+            11/3宿泊
+          </label>
+        <div class="Form-Item">
+          <p><label>お問い合わせ</label></p>
+          <textarea class="Form-Item-Textarea"></textarea>
+        </div>
+        <input type="submit" class="Form-Btn" value="送信する">
+      </div>
+      </div>
+    </main>
+
+  </div>
+    <footer>
+
+
+      <nav class="sitemap">
+        <ul class="sitemap__list flex">
+
+          <li class="sitemap__item">
+            <a href="stay.html"><img src="img/slogow.png" alt="" width="50px">ご宿泊</a>
+          </li>
+          <li class="sitemap__item">
+            <a href="cooking.html"><img src="img/llogow.png" alt="" width="50px">お食事</a>
+          </li>
+          <li class="sitemap__item">
+            <a href="nature.html"><img src="img/rlogow.png" alt="" width="50px">自然音</a>
+          </li>
+          <li class="sitemap__item">
+            <a href="flower.html"><img src="img/flologow.png" alt="" width="50px">お花畑</a>
+          </li>
+
+          <li class="sitemap__item">
+            <a href="zooindex.html"><img src="img/zlogow.png" alt="" width="50px">動物園</a>
+          </li>
+          <li class="sitemap__item">
+            <a href="handmade.html"><img src="img/alogow.png" alt="" width="50px">水族館</a>
+          </li>
+
+          <li class="sitemap__item">
+            <a href="index.html#acces"><img src="img/aclogo.png" alt="" width="50px">アクセス</a>
+          </li>
+
+
+        </ul>
+      </nav>
+
+      <p class="co"><small class="copy">&copy;2023 46期 Maeda</small></p>
+
+
+    </footer>
+
+</body>
+
+</html>
